@@ -1,0 +1,79 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Frame-2</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<link rel="shortcut icon" type="image/x-icon" href="#">
+        <!-- Place favicon.ico in the root directory -->
+        
+		<!-- CSS here -->
+        <link rel="stylesheet" href="https://cdn.tutorialjinni.com/intl-tel-input/17.0.19/css/intlTelInput.css"/>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+    </head>
+    <body>
+
+        <header class="position-fixed">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="header-content">
+                            <a href="#"><img src="assets/img/logo.svg" alt=""></a>
+                            <i></i>
+                            <div class="progress">
+                                <div class="progress-bar f10" role="progressbar"  aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">10%</div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+   
+    <main>
+        
+
+        <!---------Verificaiton Section START ---------->
+        <section class="Verificaiton-area h_100">
+            <div class="container center">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="Verificaiton_content box_style">
+                            <i>
+                                <img src="assets/img/lock.svg" alt="">
+                            </i>
+                            <h3>Account Verificaiton</h3>
+                            <p>For security and account verification purposes please enter <br>  your phone number below to receive a confirmation code.</p>
+                            <h6>PLEASE ENTER YOUR PHONE NUMBER</h6>
+                            <div class="phon_box">
+                                <input name="phone" type="text" placeholder="415 215 269" id="phone"/> 
+                            </div>
+                            <a href="Frame-3.html" class="thm_btn">Send Code  <i><img src="assets/img/right.svg" alt=""></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!---------Verificaiton Section End ---------->
+
+
+    </main>
+		<!-- JS here --> 
+        <script src="assets/js/jquery-3.4.1.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="https://cdn.tutorialjinni.com/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script>
+            var input = document.querySelector("#phone");
+            window.intlTelInput(input, {
+                separateDialCode: true,
+                excludeCountries: ["in", "il"],
+                preferredCountries: ["us", "jp", "pk", "no"]
+            });
+        </script>
+    </body>
+</html>

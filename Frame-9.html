@@ -1,0 +1,162 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Frame-9</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<link rel="shortcut icon" type="image/x-icon" href="#">
+        <!-- Place favicon.ico in the root directory -->
+        
+		<!-- CSS here -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+    </head>
+    <body>
+
+   
+        <header >
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="header-content">
+                            <a href="#"><img src="assets/img/logo.svg" alt=""></a>
+                            <i></i>
+                            <div class="progress">
+                                <div class="progress-bar f75" role="progressbar"  aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">75%</div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    <main>
+        
+
+        <!--------- Section START ---------->
+        <section class="onboarding-area  h_100 top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="onboarding_content">
+                            <h3>Complete Your <span>Dream Map</span> Survey 📝 </h3>
+                                <p>Watch this video & then complete the survey that will allow us to know how to support you and help you to gain total clarity over your goals, aspirations and vision.</p>
+                                <div class="on-board-frame box_style">
+                                  <iframe src="https://iframe.mediadelivery.net/embed/131926/98d20290-d752-4902-b8ae-626671fb663f?autoplay=false&muted=false&preload=true" loading="lazy" style="border: none;  height: 100%; width: 100%;" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true"></iframe>
+                                  
+                              </div>
+                            <div class="financial-content">
+                                <h6>What are your financial aspirations for growing the business?</h6>
+                                <p>This is description text that will add detail to the question above.</p>
+                                <textarea placeholder="This field is now selected, I am typing.....I"></textarea>
+                                <h6>Which one of these items in the drop list do you like?</h6>
+                                <p>Select any one at all.  Its up to you!</p>
+                                <div class="custom-select" >
+                                    <select>
+                                      <option value="0">This is a selected item in the list</option>
+                                      <option value="1">selected item 1</option>
+                                      <option value="2">selected item 2</option>
+                                      <option value="3">selected item 3</option>
+                                    </select>
+                                </div>
+                                <a href="Frame-10.html" class="thm_btn">Continue <i><img src="assets/img/right.svg" alt=""></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--------- Section End ---------->
+
+
+    </main>
+		<!-- JS here --> 
+        <script src="assets/js/jquery-3.4.1.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        
+<script>
+    var x, i, j, l, ll, selElmnt, a, b, c;
+    /*look for any elements with the class "custom-select":*/
+    x = document.getElementsByClassName("custom-select");
+    l = x.length;
+    for (i = 0; i < l; i++) {
+      selElmnt = x[i].getElementsByTagName("select")[0];
+      ll = selElmnt.length;
+      /*for each element, create a new DIV that will act as the selected item:*/
+      a = document.createElement("DIV");
+      a.setAttribute("class", "select-selected");
+      a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+      x[i].appendChild(a);
+      /*for each element, create a new DIV that will contain the option list:*/
+      b = document.createElement("DIV");
+      b.setAttribute("class", "select-items select-hide");
+      for (j = 1; j < ll; j++) {
+        /*for each option in the original select element,
+        create a new DIV that will act as an option item:*/
+        c = document.createElement("DIV");
+        c.innerHTML = selElmnt.options[j].innerHTML;
+        c.addEventListener("click", function(e) {
+            /*when an item is clicked, update the original select box,
+            and the selected item:*/
+            var y, i, k, s, h, sl, yl;
+            s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+            sl = s.length;
+            h = this.parentNode.previousSibling;
+            for (i = 0; i < sl; i++) {
+              if (s.options[i].innerHTML == this.innerHTML) {
+                s.selectedIndex = i;
+                h.innerHTML = this.innerHTML;
+                y = this.parentNode.getElementsByClassName("same-as-selected");
+                yl = y.length;
+                for (k = 0; k < yl; k++) {
+                  y[k].removeAttribute("class");
+                }
+                this.setAttribute("class", "same-as-selected");
+                break;
+              }
+            }
+            h.click();
+        });
+        b.appendChild(c);
+      }
+      x[i].appendChild(b);
+      a.addEventListener("click", function(e) {
+          /*when the select box is clicked, close any other select boxes,
+          and open/close the current select box:*/
+          e.stopPropagation();
+          closeAllSelect(this);
+          this.nextSibling.classList.toggle("select-hide");
+          this.classList.toggle("select-arrow-active");
+        });
+    }
+    function closeAllSelect(elmnt) {
+      /*a function that will close all select boxes in the document,
+      except the current select box:*/
+      var x, y, i, xl, yl, arrNo = [];
+      x = document.getElementsByClassName("select-items");
+      y = document.getElementsByClassName("select-selected");
+      xl = x.length;
+      yl = y.length;
+      for (i = 0; i < yl; i++) {
+        if (elmnt == y[i]) {
+          arrNo.push(i)
+        } else {
+          y[i].classList.remove("select-arrow-active");
+        }
+      }
+      for (i = 0; i < xl; i++) {
+        if (arrNo.indexOf(i)) {
+          x[i].classList.add("select-hide");
+        }
+      }
+    }
+    /*if the user clicks anywhere outside the select box,
+    then close all select boxes:*/
+    document.addEventListener("click", closeAllSelect);
+    </script>
+    </body>
+</html>

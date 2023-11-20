@@ -1,0 +1,192 @@
+/* Big screen :1200px. */
+@media (min-width: 1200px) and (max-width: 1500px) {
+
+
+}
+
+
+/* Normal screen :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+
+
+}
+
+ 
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+
+
+}
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+    .box_style {
+        border: none;
+        box-shadow: none;
+        background: no-repeat;
+    }
+
+.on-board-frame iframe {
+    min-height: 245px;
+    max-height: 400px;
+}
+    
+    .signUp-area {
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .signUp_content {
+        padding: 30px 30px;
+    }
+    .input_blk input {
+        height: 68px;
+    }
+    .header-content i {
+        display: none;
+    }
+    
+    .header-content {
+        flex-direction: column-reverse;
+        gap: 28px;
+    }
+    
+    header {
+        border: none;
+        background: no-repeat;
+        box-shadow: none;
+        padding-top: 42px;
+        position: relative !important;
+    }
+
+header.position-fixed {
+    position: relative !important;
+}
+    
+    .progress {
+        border-radius: 0;
+        border: 0;
+        border-bottom: 2px solid #E0E7F2;
+        position: absolute;
+        top: 0;
+        max-width: 100%;
+        width: 100%;
+        height: 27px;
+        background: #fff;
+    }
+    
+    .progress-bar {
+        border-radius: 0 20px 20px 0px;
+        font-size: 13px;
+    }
+    .Verificaiton-area .container.center {
+        display: block;
+    }
+    
+    .Verificaiton_content {
+        width: 100%;
+        padding: 0;
+        margin-top: 20px;
+    }
+    
+    .Verificaiton_content p br {
+        display: none;
+    }
+    
+    
+    .Verificaiton_content > i {
+        scale: 1.8;
+    }
+    
+    .Verificaiton_content h3 {
+        margin-top: 30px;
+    }
+    
+    .thm_btn {
+        height: 60px;
+        line-height: 1;
+    }
+    
+    .phon_box {
+        margin-bottom: 50px;
+    }
+
+.phon_box .iti {
+    height: 65px;
+    display: flex;
+    align-items: center;
+}
+.iti--separate-dial-code .iti__selected-flag {
+    height: 60px;
+}
+.onboarding_content {
+    margin-top: 20px;
+}
+
+.Lorraine .onboarding_content {
+    margin-top: 15px;
+}
+
+.onboarding_content p br {
+    display: none;
+}
+
+.play_btn {
+    width: 88px;
+    height: 88px;
+}
+
+.play_btn img {
+    width: 40px;
+    height: 64px;
+}
+img.tm-line {
+    max-width: 150px;
+    bottom: 7px;
+    right: 8px;
+}
+
+.onboarding_content h3 br {
+    display: none;
+}
+.sc_top {
+    flex-direction: column;
+    gap: 14px;
+}
+
+.sc_name {
+    border: none;
+    padding: 0;
+}
+
+.Lorraine .onboarding_content p br {
+    display: block;
+}
+.SURVEY-content div {
+    display: inline-block;
+}
+.financial-content.v2 p {
+    margin-right: 0;
+}
+img.check {
+    transform: translateX(3px);
+
+}
+.financial-content.v2 p.join-p {
+    width: auto;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 32px;
+}
+ 
+}
+ 
+/* Large Mobile screen :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+/* .container {width:450px} */
+.on-board-frame iframe{
+    min-height: 304px;
+}
+ 
+}

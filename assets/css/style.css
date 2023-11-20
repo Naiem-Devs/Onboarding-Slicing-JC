@@ -265,6 +265,10 @@ header{
     font-size: 30px;
     text-align: center;
 }
+
+input.actived {
+    background: #E4E7FF;
+}
 .h_100.top {min-height: calc(100vh - 105px);}
 
 .Verificaiton_content {padding: 30px 50px 64px;width: 696px;/* width: 100%; */}
@@ -391,8 +395,9 @@ header{
 }
 
 .onboarding_content h3 i {
-    margin-left: -10px;
     font-size: 26px;
+    transform: translateY(-5px);
+    display: inline-block;
 }
 .on-board-frame {
     position: relative;
@@ -604,6 +609,11 @@ a.zoom_link b {
 
 .financial-content h6 {
     margin-bottom: 6px;
+}
+
+.financial-content h6 img {
+    width: 16px;
+    transform: translate(2px, -3px);
 }
 
 .note{
